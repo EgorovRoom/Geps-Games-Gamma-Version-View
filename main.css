@@ -1,0 +1,353 @@
+@font-face {
+  font-family: SF;
+  font-weight: 600;
+  src: url("https://sf.abarba.me/SF-UI-Text-Semibold.otf");
+}
+/*1.1*/
+/*Работа с header*/
+html > body > header
+{
+  position: fixed; /*Игнорить всех*/
+  top: 0; /*прибить*/
+  left: 0;/*Подвязать слева*/
+  right: 0;/*Подвязать справа*/
+}
+
+.flex-container-header-main
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  min-width: 210px;
+  height: 64px;
+  
+  background-color: black;
+}
+.flex-container-header
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  text-align: center;
+
+  min-width: 210px;
+  height: 64px;
+  
+  background-color: black;
+}
+htlm > header > .empty
+{
+  margin: 0px;
+}
+.flex-item-header:first-child
+{
+  margin-bottom: 2px;
+  margin-left: 12px;
+}
+/*почему у меня два элемента с nth-of-type(1) ?!*/
+.flex-item-header:nth-of-type(1):not(:first-child)
+{
+  margin-right: 35px;
+}
+.block1 /*?*/
+{
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 5px;
+}
+.block1:first-child
+{
+  padding-left: 12px;
+}
+.header-text
+{
+  font-family: Myriad Pro;
+  color: white;
+  font-size: 17px;
+}
+/*1.2*/
+/*Работа с ссылками в header*/
+a,a:hover
+{
+  text-decoration: none;
+  color:  rgb(177, 177, 177);
+}
+a:hover
+{
+  /*color: rgb(73, 255, 112);*/
+  color: #FF9500;
+}
+
+.left-arrow
+{
+  background-image: url('svg/back.svg');
+  background-size: 13px 20px;
+  background-position: left;
+  background-repeat: no-repeat;
+  padding-top: 2px; /* — хорошее решение, если бы не тот факт, что сам текст спустится с базовой линии текста по середине, поэтому нужно в родителе поднять на 2px*/
+  padding-left: 15px;
+}
+.extra_back_text
+{
+}
+
+/*2.1*/
+/*Работа с body*/
+
+html > body
+{
+  /*3. И поэтому приходится писать здесь display: inline-block;*/
+  display: inline-block;
+
+  margin: 0;
+  
+  /*4. А здесь писать width: 100px;*/
+  min-width: 100%;
+  height: 100vh;
+  
+  background-color: #1B1B1B;
+}
+html > body > main
+{
+  /*Фиговое решение для вопроса:
+  Как сделать прокручиваемый контент, при этом, чтобы на другом экране,
+  то бишь здесь кнопки центровались по body, чья высота совпадала с размером экрана*/
+  margin-top: 64px;
+  /*5. И всё равно приходится снизу отбить кусочек, чтобы выровнять, как требуется*/
+  margin-bottom: 64px;
+  /*Из-за этого решения мой body подхватывает margin-top, но об этом ничего не говорит
+  Он тупо начинается с того же места, где и main*/
+  min-height: calc(100vh - 128px);
+
+  /*Второй способ - сделать текст на определённом экране сдвинутым вниз, а в остальных
+  кадрах тупо следить, чтобы мало ли, элементы не задвинулись туда*/
+}
+.flex-container-main
+{
+  display: flex;
+
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+}
+.flex-item-main
+{
+  min-width: 140px;
+  width: 64%;
+  padding: 20px;
+  margin: 15px 0px 15px 0px;
+  
+  background-color: black;
+  
+  border-radius: 7px;
+  
+  border: 0px;
+}
+p.orange-text29
+{
+  margin: 0;
+}
+.flex-container-choise_player_numbers
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; /*Пригодится для animate странички, но не нужен для choise_player странички*/
+  align-content: center;
+}
+.flex-item-choise_player_numbers
+{
+  margin: 0.8%;
+  padding: 10px 3.5%;
+  
+  min-width: 151.8px;
+  width: 46.93%;
+  height: 165px;
+  
+  background-color: #FF9500;
+  
+  border-radius: 7px;
+  
+  border: 0px;
+}
+.flex-container-guide
+{
+  display: flex;
+  align-items: left;
+  flex-flow: column wrap;
+  
+  margin-left: 20px;
+  margin-right: 20px;
+  
+  color: white;
+}
+.flex-item-guide
+{
+  align-self: stretch;
+  
+  margin-top: -12px;
+  padding-top: 2px;
+  
+  background-color: #444;
+}
+
+/*Работа с текстами*/
+
+.white-text14
+{
+  font-family: Myriad Pro;
+  color: white;
+  font-size: 14px;
+}
+.white-text17
+{
+  font-family: Myriad Pro;
+  color: white;
+  font-size: 17px;
+}
+.white-text25
+{
+  font-family: Myriad Pro;
+  color: white;
+  font-size: 25px;
+}
+.white-text120
+{
+  font-family: Myriad Pro;
+  color: white;
+  font-weight: 500;
+  font-size: 120px;
+}
+.orange-text17
+{
+  font-family: Myriad Pro;
+  font-weight: 300;
+  color: #FF9500;
+  font-size: 17px;
+}
+.orange-text29
+{
+  font-family: Myriad Pro;
+  font-weight: 300;
+  color: #FF9500;
+  font-size: 29px;
+}
+#left
+{
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  float: left;
+  text-align: left;
+}
+#right
+{
+  display: inline-block;
+  float: right;
+}
+
+/*animate*/
+@keyframes search-1
+{
+  from
+  {
+    background-position: 0px;
+  }
+  to
+  {
+    background-position: 3840px;
+  }
+}
+div.search-1
+{
+  width: 240px;
+  height: 255px;
+  background-image:
+    url('svg/animate_search-3.svg');
+  animation: search-1 1.2s steps(16) infinite;
+  animation-direction: reverse;
+}
+
+/*для страницы с гридами (результаты игроков)*/
+.container-with-rows
+{
+  display: grid;
+  
+  margin-bottom: 0;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr) calc(1fr - 10px) calc(1fr - 10px);
+}
+.row-with-elements
+{
+  display: grid;
+
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+  padding-left: 1em;
+  padding-right: 1em;
+
+  grid-template-columns: 40px 1fr 40px 40px;
+  grid-template-rows: 1fr;
+
+  grid-column-gap: 3px;
+
+  border-top: 5px solid #1B1B1B;
+
+  background-color: black;
+}
+.row-with-elements:last-child
+{
+  display: grid;
+
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+  margin-bottom: 40px;
+
+  padding-left: 1em;
+  padding-right: 1em;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+
+  grid-column-gap: 0px;
+
+  border-top: 5px solid #1B1B1B;
+
+  background-color: black;
+}
+.item-rows
+{
+  text-align: center;
+}
+.special-score
+{
+  margin-bottom: 2.35em;
+}
+/*для страницы с гридами (результаты игроков) — footer*/
+.container-with-button-ok
+{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 64px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/**/
+.ads-pictures
+{
+  width: 100%;
+}
