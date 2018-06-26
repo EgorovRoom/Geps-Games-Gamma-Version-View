@@ -12,19 +12,27 @@
       <strong class='header-text' >Определение команды</strong>
     </p>
   </header>
-  <main class='flex-container-main'>
-    <p class='haupt-text'>Синяя команда</p>
-    <p class='help-text'>Цвет команды <br> отображается внизу</p>
-    <div></div>
+  <main class='flex-container-main white-background'>
+    <p id='your-comand-color' class='haupt-text vertical-main-axis'>Команда не определена </p>
+    <span class='help-text a-litle-bit-in-top vertical-main-axis'>Цвет команды <br> отображается внизу</span>
+    <svg id='main-sector' width="45.0001mm" height="47.8481mm" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+    viewBox="0 0 1178 1252">
+      <polygon name='animate-my-choise' id='main-polygon' class="" points="746,0 1149,233 589,554 29,233 432,0 432,91 432,181 510,227 589,272 667,227 746,181 746,91 "/>
+    </svg>
+    <svg width="45.0001mm" height="47.8481mm" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+    viewBox="0 0 1178 1252">
+      <polygon id='left-polygon' class="not-active-style" points="618,606 1178,283 1178,748 1099,703 1021,657 942,703 864,748 864,839 864,929 942,975 1021,1020 618,1252 "/>
+      <polygon id='right-polygon' class="not-active-style" points="559,606 0,283 0,748 79,703 157,657 236,703 314,748 314,839 314,929 236,975 157,1020 559,1252 "/>
+    </svg>
+    <span class='help-text vertical-main-axis'>Жми, <br> чтобы начать</span>
   </main>
-  <footer>
-    <div id='line-head-in-footer'></div>
-    <div id='line-menu-in-footer'>
-        <div id='color-line-in-footer'>
+  <footer class='extra-color-helper'>
+    <div id='line-head-in-helper'></div>
+    <div id='line-menu-in-helper'>
+        <div id='color-line-in-helper'>
         </div>
     </div>
   </footer>
+  <script src="determinate-team.js"></script>
 </body>
 </html>
-<!-- Как отцентровать все элементы по вертикали (то есть поставить элементы по центру высоты холста) -->
-<!-- Почему немного body больше, чем холст (672.5 вместо 667) -->

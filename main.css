@@ -149,13 +149,10 @@ html > body > main
   
   border: 0px;
 }
-p.orange-text29
-{
-  margin: 0;
-}
 .flex-container-choise_player_numbers
 {
   display: flex;
+
   flex-wrap: wrap;
   justify-content: center;
   align-items: center; /*Пригодится для animate странички, но не нужен для choise_player странички*/
@@ -238,6 +235,32 @@ p.orange-text29
   color: #FF9500;
   font-size: 29px;
 }
+p.orange-text29
+{
+  margin: 0;
+}
+.haupt-text
+{
+  font-family: Myriad Pro;
+  font-weight: 600;
+  color: black;
+  font-size: 1.2em;
+}
+.help-text
+{
+  font-family: Myriad Pro;
+  font-weight: 400;
+  color: black;
+  font-size: 1em;
+}
+.vertical-main-axis
+{
+  text-align: center;
+}
+.a-litle-bit-in-top
+{
+  margin-top: -1em;
+}
 #left
 {
   display: inline-block;
@@ -268,11 +291,15 @@ div.search-1
 {
   width: 240px;
   height: 255px;
+
   background-image:
     url('svg/animate_search-3.svg');
+  
   animation: search-1 1.2s steps(16) infinite;
   animation-direction: reverse;
 }
+
+p#waiting-players{}
 
 /*для страницы с гридами (результаты игроков)*/
 .container-with-rows
@@ -351,3 +378,76 @@ div.search-1
 {
   width: 100%;
 }
+
+/**/
+.white-background
+{
+  background-color: rgba(255, 255, 255, 1);
+}
+.not-active-style
+{
+  fill-opacity: 0.3;
+}
+svg
+{
+  margin: 1em;
+  width: 45.0001mm;
+  height: 47.8481mm;
+}
+.extra-color-helper
+{
+  display: flex;
+  flex-direction: column;
+
+  margin-top: -64px;
+
+  height: 64px;
+}
+#line-head-in-helper
+{
+  height: 20px;
+  width: 100%;
+  
+  align-self: flex-start;
+
+  background-color: black;
+}
+#line-menu-in-helper
+{
+  display: flex;
+
+  height: 44px;
+  width: 100%;
+
+  align-self: flex-end;
+
+  justify-content: center;
+  align-items: center;
+}
+#color-line-in-helper
+{
+  border-radius: 6px;
+  width: 50%;
+  height: 12px;
+}
+
+@keyframes animate-my-choise {
+  0%,100%
+  {
+    filter: sepia(0);
+    filter: brightness(110%);
+  }
+  50%
+  {
+    filter: sepia(0.3);
+    filter: brightness(40%);
+  }
+}
+
+#main-sector
+{
+  margin-bottom: -52.2mm;
+
+  animation: animate-my-choise 1.2s infinite ease-in-out;
+}
+
