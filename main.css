@@ -357,7 +357,7 @@ p#waiting-players{}
 {
   text-align: center;
 }
-.special-score
+#special-score
 {
   margin-bottom: 2.35em;
 }
@@ -451,3 +451,23 @@ svg
   animation: animate-my-choise 1.2s infinite ease-in-out;
 }
 
+/*Play-page panel*/
+#panel
+{
+  display: flex;
+
+  margin-top: -128px;
+
+  height: 128px;
+}
+#line-head-in-panel
+{
+  height: 40px;
+  width: 100%;
+  
+  align-self: start;
+
+  background-color: black;
+
+  display: grid;
+}
